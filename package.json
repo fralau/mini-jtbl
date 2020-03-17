@@ -1,0 +1,33 @@
+{
+  "name": "test_jtbl",
+  "version": "0.0.1",
+  "description": "Testing jtable",
+  "author": "Laurent Franceschetti",
+  "license": "MIT",
+  "main": "jtbl_schema.js",
+  "dependencies": {
+    "cli-highlight": "^2.1.4",
+    "colors": "^1.4.0",
+    "download-file-sync": "^1.0.4",
+    "highlight": "^0.2.4",
+    "hljs": "^6.2.3",
+    "js-beautify": "^1.10.3",
+    "jsonschema": "^1.2.5",
+    "markdown-table": "^2.0.0",
+    "minimist": "^1.2.5",
+    "papaparse": "^5.1.1",
+    "pretty-js": "^0.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "jcsv": "./jt_csv.js",
+    "jcut": "./jt_cut.js",
+    "jlimit": "./jt_limit.js",
+    "jwhere": "./jt_where.js",
+    "jout": "./jt_out.js",
+    "jschema": "./jt_schema.js"
+  }
+}

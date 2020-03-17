@@ -1,0 +1,12 @@
+# Ignore the following files
+# See http://help.github.com/ignore-files/
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Exclude old files
+*_old*.*
