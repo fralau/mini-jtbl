@@ -43,13 +43,11 @@ It also provides a utility `jschema` to test **compliance** of a JTable file
 with the JTable schema. 
 
 ## Documentation
+mini-jtbl has its own [documentation page](http://www.settlenext.com/jtbl/mini-jtbl/),
+which is part of the documentation on the JTable format.
 
-All comman-line utilities provide a help, accessible with the options
+All command-line utilities provide a help, accessible with the options
 `-h` or `--help`.
-
-The  mini-jtbl has its own documentation page. 
-
-It part of the documentation on the JTable format.
 
 ## Limitations
 The purpose of **mini-jtbl** is not to become a production tool.
