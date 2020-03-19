@@ -45,8 +45,8 @@ with the JTable schema.
 ## Example
 
 ```
-$ jcsv "https://datahub.io/world-bank/en.pop.dnst/r/data.csv" | jwhere "Year*1 < 1964" | jlimit 5
-Apply expression on each row: Year*1 < 1964
+$ jcsv "https://datahub.io/world-bank/en.pop.dnst/r/data.csv" | jwhere "Year < 1964" | jlimit 5
+Apply expression on each row: Year < 1964
 Limit rows: 5
 | Country Name           | Country Code | Year | Value            |
 | ---------------------- | ------------ | ---- | ---------------- |
