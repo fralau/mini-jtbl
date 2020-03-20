@@ -42,14 +42,27 @@ npm link
 It also provides a utility `jschema` to test **compliance** of a JTable file
 with the JTable schema. 
 
+## Example
+
+```
+$ jcsv "https://datahub.io/world-bank/en.pop.dnst/r/data.csv" | jwhere "Year < 1964" | jlimit 5
+Apply expression on each row: Year < 1964
+Limit rows: 5
+| Country Name           | Country Code | Year | Value            |
+| ---------------------- | ------------ | ---- | ---------------- |
+| Arab World             | ARB          | 1961 | 6.97623904408321 |
+| Arab World             | ARB          | 1962 | 7.16985259355326 |
+| Arab World             | ARB          | 1963 | 7.37014441614233 |
+| Caribbean small states | CSS          | 1961 | 10.567692687747  |
+| Caribbean small states | CSS          | 1962 | 10.7651828063241 |
+```
+
 ## Documentation
+mini-jtbl has its own [documentation page](http://www.settlenext.com/jtbl/mini-jtbl/),
+which is part of the documentation on the JTable format.
 
-All comman-line utilities provide a help, accessible with the options
+All command-line utilities provide a help, accessible with the options
 `-h` or `--help`.
-
-The  mini-jtbl has its own documentation page. 
-
-It part of the documentation on the JTable format.
 
 ## Limitations
 The purpose of **mini-jtbl** is not to become a production tool.
