@@ -66,7 +66,6 @@ else {
 
 // DO NOT specify that the string has a header, as we want a list of lists
 var result = Papa.parse(csv_file);
-// console.log(result);
 
 // Exploit the results
 if (result.errors.length >0) {
@@ -87,14 +86,23 @@ else {
     }
 }
 
+// Bug: Trim (remove last row if empty)
+var last_row = rows[rows.length-1]
+const isNull = (item) => item == null || item == ''
+if (Boolean(last_row.every(isNull))){
+    rows.pop()
+}
+
 // Output
 var jtbl = {'source': source, 'header': header, 'rows': rows}
+var out
 if (Boolean(process.stdout.isTTY)) {
     if (header != null){
         // if no header, invent one
         header = new Array(rows[1].length)
     }
-    markdown_table([header].concat(rows))
+    out = markdown_table([header].concat(rows))
 } else {
-    process.stdout.write(JSON.stringify(jtbl) + '\n')
+    out = JSON.stringify(jtbl) + '\n'
 }
+process.stdout.write(out)

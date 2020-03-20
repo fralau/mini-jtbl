@@ -86,8 +86,61 @@ class JTable {
         }
     }
 
+    /**
+     * Get the length (no of rows)
+     */
+    get length(){
+        return this.rows.length
+    }
 
+    /**
+     * Get the width (no of columns of the table)
+     */
+    get width(){
+        return this.normHeader.length
+    }
 
+    /**
+     * Get the type of the columns (indicative) 
+     */
+    get headerTypes(){     
+        // check the first
+        if (this.length == 0) {
+            return []
+        }
+        var row = this.rows[0]
+        var r = []
+        for (const i in row) {
+            r[i] = typeof row[i]
+        } 
+        // check the last, just in case:
+        var row = this.rows[this.length - 1]
+        for (const i in row) {
+            if (r[i] == 'null') {
+                r[i] = typeof row[i]
+            }
+        }
+        return r
+    }
+      
+
+    // ------------------------------------
+    // Read 
+    // -----------------------------------
+
+    /**
+     * Read a JTable from a file
+     * @param {string} filename 
+     */
+    read(filename) {
+        var s = fs.readFileSync(filename, 'utf-8')
+        this.table = JSON.parse(s)
+        return this.table;
+    }
+
+    // ------------------------------------
+    // Output
+    // -----------------------------------
     /**
      * Make a string representation of a JTable
      */
@@ -135,18 +188,7 @@ class JTable {
         return beautify(JSON.stringify(res) + '\n')
     }
 
-    // ------------------------------------
-    // Read 
-    // -----------------------------------
 
-    /**
-     * Read a JTable from a file
-     * @param {string} filename 
-     */
-    read(filename) {
-        this.table = JSON.parse(fs.readFileSync(filename, 'utf-8'))
-        return this.table;
-    }
 
     // ------------------------------------
     // Write

@@ -23,7 +23,8 @@ if (args.h || args.help) {
 usage:
     jout [-t FORMAT] [-h][--help] [--target FORMAT]
 
-Read a JTable from stdin and provide a formatted/colorized output
+Read a JTable from stdin and provide a formatted/colorized output.
+By default, the format is is ${DEFAULT_FORMAT} (even to the screen).
 
 optional arguments:
     -h, --help            show this help message and exit

@@ -27,7 +27,9 @@
     "jcut": "./jt_cut.js",
     "jlimit": "./jt_limit.js",
     "jwhere": "./jt_where.js",
+    "jset": "./jt_set.js",
     "jout": "./jt_out.js",
+    "jstat": "./jt_stat.js",
     "jschema": "./jt_schema.js"
   }
 }
