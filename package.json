@@ -14,7 +14,7 @@
     "js-beautify": "^1.10.3",
     "jsonschema": "^1.2.5",
     "markdown-table": "^2.0.0",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "papaparse": "^5.2.0",
     "pretty-js": "^0.2.1"
   },
