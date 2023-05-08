@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "jtbl_schema.js",
   "dependencies": {
-    "cli-highlight": "^2.1.4",
+    "cli-highlight": "^2.1.11",
     "colors": "^1.4.0",
     "download-file-sync": "^1.0.4",
     "highlight": "^0.2.4",
